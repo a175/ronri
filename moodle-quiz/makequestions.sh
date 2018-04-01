@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# USAGE: ./makequestions.sh texfile N? A|E
+# USAGE: ./makequestions.sh texfile -N? A|E
 
 PROP1='&exist;<i>x</i>&isin;<i>A</i>, <i>x</i>&isin;<i>B</i>. '
 PROP2='&forall;<i>x</i>&isin;<i>A</i>, <i>x</i>&isin;<i>B</i>.'
@@ -12,7 +12,7 @@ PROP7='&exist;<i>x</i>&isin;<i>B</i>, <i>x</i>&notin;<i>A</i>. '
 PROP8='&forall;<i>x</i>&isin;<i>B</i>, <i>x</i>&notin;<i>A</i>.'
 
 
-if [ "$2" =  "N" ]
+if [ "$2" =  "-N" ]
 then
     PROPPRE='「'
     PROPSUF='」が成り立たない.'
