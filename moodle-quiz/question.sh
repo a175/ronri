@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 # USAGE: CORRECTANSWER=1 bash question.sh PROP1 PROP2 ..
+# If CORRECTANSWER is negative, then exit without output.
 
 CORRECTANSWER=${CORRECTANSWER:-'1'}
-
+if [ $CORRECTANSWER -lt 0 ]
+then
+    exit
+fi
 
 cat - | while read PROP
 do
